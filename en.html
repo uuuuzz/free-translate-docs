@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Privacy policy for Free Translate: local and cloud translation, API credentials, browser storage, permissions and deletion controls.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy Policy · Free Translate</title>
+  <link rel="canonical" href="https://uuuuzz.github.io/free-translate-docs/en.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://uuuuzz.github.io/free-translate-docs/">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead"><div class="header-inner"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">译</span><span>Free Translate<small>免费翻译</small></span></a><nav class="languages" aria-label="Page language"><a href="./" lang="zh-CN">简体中文</a><a href="en.html" lang="en" aria-current="page">English</a></nav></div></header>
+  <main id="main">
+    <p class="eyebrow">Privacy and data handling</p>
+    <h1>Privacy Policy</h1>
+    <p class="dates">Effective: <time datetime="2026-10-29">October 29, 2026</time><span aria-hidden="true"> · </span>Last updated: October 29, 2026</p>
+    <p>This policy is provided by the maintainer of the Free Translate browser extension (GitHub account <a href="https://github.com/uuuuzz" rel="noopener noreferrer">uuuuzz</a>, “we” or “us”). It describes the current extension and this policy website. The extension translates webpage text, selected text and accessible video captions. It is independently developed and is not an official product of Google, Tencent Cloud or another model provider.</p>
+    <aside class="summary" aria-label="Key points"><strong>Three things to know</strong><ul><li>The default “Chrome翻译” option uses the browser’s local translation capability.</li><li>Cloud translation sends the text to the selected service. Enabling automatic translation for a site also allows eligible content on that site to enter the translation flow automatically.</li><li>The current extension has no developer-operated translation proxy, advertising SDK or analytics SDK. Settings, credentials and caches are primarily stored in your browser.</li></ul></aside>
+    <nav class="toc" aria-label="Policy contents"><a href="#information">Information handled</a><a href="#translation">Local and cloud translation</a><a href="#providers">Third-party services</a><a href="#storage">Storage and retention</a><a href="#permissions">Permissions</a><a href="#controls">Your controls and deletion</a><a href="#use">Use and security</a><a href="#website">This website and support</a><a href="#updates">Policy changes</a><a href="#contact">Contact</a></nav>
+
+    <section id="information"><h2>1. Information the extension handles</h2>
+      <ul><li><strong>Translation content:</strong> webpage text, selections and accessible captions that you choose or permit to translate, plus a small amount of adjacent caption text for context. Automatic webpage scanning excludes common input controls, forms and code areas. Ordinary page text and explicit selections may still contain personal or sensitive information.</li>
+      <li><strong>Page and playback information:</strong> the current page address, site origin, title, video identifier, caption track and playback time, used to identify content, apply site preferences and synchronize captions. The extension does not call the browser history API or build a complete browsing-history profile for upload to the developer.</li>
+      <li><strong>Settings and credentials:</strong> your selected engine and languages, site rules, display preferences, custom endpoints, model identifiers, icons, personal API keys or access tokens, and local character budgets.</li>
+      <li><strong>Local caches and diagnostics:</strong> source-text or translation caches, cache identifiers, usage counts, request timing, error codes, request IDs and timestamps. The extension’s diagnostics do not intentionally record API keys or translation content. Functional content caches are separate from diagnostics.</li></ul>
+    </section>
+
+    <section id="translation"><h2>2. Local and cloud translation</h2>
+      <h3>Chrome translation</h3><p>When the browser supports the required capability and language packs are ready, the browser’s on-device model produces the translation. For this translation path, the extension does not send the text to the developer or a cloud-model endpoint. The browser may download language packs, subject to its provider’s practices. Fetching online captions can still contact the original website, so local translation does not mean that the entire extension is offline.</p>
+      <h3>Cloud models and custom endpoints</h3><p>When you select and start cloud translation, or enable automatic translation for a website, the extension sends text segments, source and target languages, item identifiers and necessary translation instructions to the selected endpoint. Video requests may include a small amount of adjacent caption text. Requests authenticate using the relevant API credential.</p>
+      <p>The current extension requests the selected service directly from your browser, without a translation proxy operated by us. The receiving service can obtain the request contents and ordinary connection information, such as your IP address, request time and client information. The extension does not include the original website’s login cookies or your entire browser history in model translation payloads.</p>
+      <p>The extension does not perform speech recognition for media without captions or upload audio/video streams for translation. Imported subtitle files are first parsed locally; their text may be sent if you subsequently use cloud translation. The original audio/video file is not uploaded by that action.</p>
+    </section>
+
+    <section id="providers"><h2>3. Services that may receive information</h2>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Selected feature</th><th scope="col">Recipient or processing environment</th></tr></thead><tbody>
+        <tr><td>Chrome translation</td><td>The browser’s local translation capability; language packs are managed by the browser provider.</td></tr>
+        <tr><td>Four bundled test models</td><td>Tencent Cloud TokenHub. These currently include Hy-MT2-Lite, GLM-5.3-FlashX, DeepSeek-V4.1-Flash-1017 and MiniMax-M3.1-Flash. Depending on deployment and routing, Tencent Cloud and its connected model providers may process the request.</td></tr>
+        <tr><td>Personally configured GPT, Claude or Gemini</td><td>The corresponding OpenAI, Anthropic or Google API service.</td></tr>
+        <tr><td>Custom endpoints and other saved services</td><td>The operator of the endpoint you specify or select, including a local service that you deploy.</td></tr>
+        <tr><td>Online captions and platform translation</td><td>The original platform, such as YouTube, Bilibili or Netflix, through accessible page captions or relevant endpoints. Selecting YouTube platform translation requests the target-language version of the captions from YouTube.</td></tr>
+      </tbody></table></div>
+      <p>A third party’s retention, processing location, training practices and account logs depend on its terms, plan and settings. This policy does not replace those policies or guarantee identical practices across services. Check whether a service is suitable for your content before using it, and avoid submitting secrets or sensitive information that should not be shared. Services and their infrastructure may be outside your country or region.</p>
+      <ul class="resource-links"><li><a href="https://cloud.tencent.com/document/product/1823/130108" rel="noopener noreferrer">Tencent Cloud TokenHub privacy policy</a> / <a href="https://cloud.tencent.com/document/product/301/129852" rel="noopener noreferrer">service terms</a></li><li><a href="https://openai.com/policies/privacy-policy/" rel="noopener noreferrer">OpenAI privacy policy</a></li><li><a href="https://www.anthropic.com/legal/privacy" rel="noopener noreferrer">Anthropic privacy policy</a></li><li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google privacy policy</a> / <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Gemini API terms</a></li></ul>
+    </section>
+
+    <section id="storage"><h2>4. Storage and retention</h2>
+      <ul><li><strong>API keys:</strong> personal keys are kept in extension session storage by default and are cleared when the browser or extension session ends or is reset. If you enable long-term local storage, the key remains in the browser’s local extension storage until you remove it or uninstall the extension. This storage is not an encrypted vault.</li>
+      <li><strong>Other preferences:</strong> model, language, site and display settings are stored locally. The extension does not use Chrome sync storage to synchronize these records automatically.</li>
+      <li><strong>Content caches:</strong> persistent caption and cloud-translation caches generally have a 14-day validity period and size or entry limits. Expired records are discarded during subsequent reads, writes or manual clearing, rather than by a deletion service that runs at the exact expiry time. Temporary page captions, imports and local translations are released when the page closes or resets.</li>
+      <li><strong>Diagnostics and counters:</strong> these stay locally to show recent connection status and usage. Clearing translation caches does not automatically clear service settings, keys or usage records.</li>
+      <li><strong>Exports:</strong> you control downloaded SRT, VTT and similar files. Closing or uninstalling the extension does not delete those downloads.</li></ul>
+      <p>Some test releases include limited shared model credentials supplied by the developer. They are not personal user keys and do not promise unlimited free usage. Your saved personal key takes priority. Packaging credentials does not guarantee that an installation owner cannot extract them; the provider controls their actual scope and quota.</p>
+    </section>
+
+    <section id="permissions"><h2>5. Why permissions are used</h2>
+      <ul><li><code>storage</code>: stores the settings, credentials, caches and local status described above.</li><li><code>activeTab</code> and <code>scripting</code>: run translation code packaged with the extension on pages you interact with or authorize.</li><li><code>contextMenus</code>: provides right-click translation actions.</li><li>Video-platform and model-endpoint permissions: retrieve relevant captions and send the translation requests you select.</li><li>Optional HTTP/HTTPS access: supports other authorized websites, site-specific automatic translation and custom endpoints.</li></ul>
+      <p>Site permission alone does not mean that every page is uploaded to a model. Translation depends on your actions and saved site rules. Video-site adapters may read or temporarily retain relevant caption responses already received by the page before translation starts.</p>
+    </section>
+
+    <section id="controls"><h2>6. Your controls and deletion options</h2>
+      <ul><li>Select Chrome translation, turn translation off, or disable automatic translation for a site to control future activity. Stopping or cancelling a request cannot guarantee withdrawal of data already received by a provider.</li><li>In service settings, select the option to delete the service’s saved key and save the settings to remove a personal key.</li><li>Deleting a custom model clears its configuration and saved key, not the remote model service. A revision marker without the endpoint, display name or key is retained to prevent stale results from returning.</li><li>Use the cloud-translation cache clear button and the video panel’s caption cache controls to clear the corresponding caches. Restoring the original webpage is a display action, not a cache deletion.</li><li>You can revoke site access or uninstall the extension in Chrome. Uninstallation clears local extension storage; downloaded files and records retained by providers require separate handling.</li></ul>
+      <p>You may contact us below with privacy questions or data-related requests. Local records can be managed through these controls. Requests concerning records independently retained by a third party may also need to be addressed to that provider. This policy does not limit rights you have under applicable law.</p>
+    </section>
+
+    <section id="use"><h2>7. Use limitations and security</h2>
+      <p>Information handled by the extension is used for translation, preferences, caching, usage controls and necessary troubleshooting. We do not sell this information, use it for targeted advertising or credit evaluation, or use translation content to train the developer’s own models. The current extension has no advertising SDK, analytics SDK or telemetry service that sends translation content to the developer.</p>
+      <p>Remote model requests use HTTPS. User-configured loopback endpoints may use HTTP. Personal keys are not displayed in webpage translation overlays or extension diagnostics; bundled test credentials are used only in the extension background. Client software, local storage, packaged credentials and third-party processing cannot be described as risk-free.</p>
+    </section>
+
+    <section id="website"><h2>8. This policy website and support channels</h2>
+      <p>This is a static GitHub Pages website. It has no advertising, analytics scripts, forms or tracking cookies set by us, and it does not read extension settings or keys. GitHub states that Pages logs visitor IP addresses for security purposes; that hosting activity is subject to the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
+      <p>If you contact us through GitHub Issues or the QQ group, information you submit is handled by that platform and may be visible to other participants. Do not post API keys, account credentials or sensitive translation content in public issues or group messages. For a sensitive matter, first ask about an appropriate private contact method.</p>
+    </section>
+
+    <section id="updates"><h2>9. Policy changes</h2><p>We will publish updates here and change the date. Material changes to functionality or data practices will be reflected in product information or appropriate notices, as applicable. The Chinese and English pages describe the same practices; contact the maintainer if you notice a discrepancy.</p></section>
+    <section id="contact"><h2>10. Contact</h2><p>Maintainer: the Free Translate developer, GitHub account <a href="https://github.com/uuuuzz" rel="noopener noreferrer">uuuuzz</a>.</p><ul><li>GitHub: <a href="https://github.com/uuuuzz/free-translate-docs/issues" rel="noopener noreferrer">public documentation repository Issues</a></li><li>Official community QQ group: <strong>1130151486</strong></li></ul></section>
+  </main>
+  <footer class="site-footer"><span>Free Translate · Privacy Policy</span><a href="./" lang="zh-CN">阅读简体中文版</a><a href="#main">Back to top</a></footer>
+</body>
+</html>

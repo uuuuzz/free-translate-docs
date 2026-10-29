@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="免费翻译浏览器扩展隐私政策：本地与云端翻译、API Key、本机缓存、权限和数据删除方式。">
+  <meta name="referrer" content="no-referrer">
+  <title>隐私政策 · 免费翻译</title>
+  <link rel="canonical" href="https://uuuuzz.github.io/free-translate-docs/">
+  <link rel="alternate" hreflang="en" href="https://uuuuzz.github.io/free-translate-docs/en.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="masthead"><div class="header-inner"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">译</span><span>免费翻译<small>Free Translate</small></span></a><nav class="languages" aria-label="页面语言"><a href="./" lang="zh-CN" aria-current="page">简体中文</a><a href="en.html" lang="en">English</a></nav></div></header>
+  <main id="main">
+    <p class="eyebrow">隐私与数据处理</p>
+    <h1>隐私政策</h1>
+    <p class="dates">生效日期：<time datetime="2026-10-29">2026 年 10 月 29 日</time><span aria-hidden="true"> · </span>最近更新：2026 年 10 月 29 日</p>
+    <p>本政策由“免费翻译”浏览器扩展的维护者（GitHub 账号 <a href="https://github.com/uuuuzz" rel="noopener noreferrer">uuuuzz</a>，下称“我们”）提供，说明现有扩展及本政策网页如何处理信息。扩展用于网页正文、选中文字和可读取的视频字幕翻译。它是独立开发的产品，不代表 Google、腾讯云或其他模型服务商。</p>
+    <aside class="summary" aria-label="主要说明"><strong>先了解这三点</strong><ul><li>默认的“Chrome翻译”使用浏览器提供的本地翻译能力。</li><li>选择云端模型后，待译文字会发送到相应服务；“始终翻译本站”会让该站点后续符合条件的内容自动进入翻译流程。</li><li>当前扩展没有开发者运营的翻译代理后台，也没有广告或分析统计 SDK。设置、凭据和缓存主要保存在你的浏览器中。</li></ul></aside>
+    <nav class="toc" aria-label="政策目录"><a href="#information">处理的信息</a><a href="#translation">本地与云端翻译</a><a href="#providers">第三方服务</a><a href="#storage">保存与期限</a><a href="#permissions">权限</a><a href="#controls">你的控制与删除方式</a><a href="#use">用途与安全</a><a href="#website">本网页与联系渠道</a><a href="#updates">政策更新</a><a href="#contact">联系我们</a></nav>
+
+    <section id="information"><h2>1. 处理哪些信息</h2>
+      <ul><li><strong>翻译内容：</strong>你选择或允许翻译的网页正文、选中文字、可读取的字幕，以及为保持译文连贯性而使用的少量相邻字幕。自动正文扫描会跳过常见输入控件、表单和代码区域；普通网页文本或主动选中的内容仍可能包含个人或敏感信息。</li>
+      <li><strong>页面和播放信息：</strong>当前页面地址、站点来源、标题、视频标识、字幕轨道及播放时间，用于识别内容、应用网站偏好和同步字幕。扩展不调用浏览历史 API，也不建立上传给开发者的完整浏览历史档案。</li>
+      <li><strong>设置和凭据：</strong>选择的引擎和语言、网站翻译规则、显示设置、自定义接口地址与模型 ID、图标、你填写的 API Key 或访问令牌，以及本机字符预算。</li>
+      <li><strong>本机缓存和诊断：</strong>原文或译文缓存、缓存标识、用量计数、请求耗时、错误码、请求 ID 和时间。扩展自身的诊断不主动记录 API Key 或待译正文；功能缓存与诊断是不同的数据。</li></ul>
+    </section>
+
+    <section id="translation"><h2>2. 本地与云端翻译</h2>
+      <h3>Chrome翻译</h3><p>在浏览器支持相应能力且语言包就绪时，译文由设备上的浏览器翻译模型生成，扩展不会为这一路翻译把待译文字发送给开发者或云端模型接口。浏览器可能需要下载语言包；其自身的数据处理遵循浏览器提供方的说明。读取在线视频字幕仍可能访问原网站，因此本地翻译不代表整个扩展完全不联网。</p>
+      <h3>云端模型与自定义接口</h3><p>当你选择并启动云端翻译，或启用了某站点的自动翻译，扩展会向所选接口发送待译文本片段、源语言与目标语言、条目标识及必要的翻译指令；视频翻译可能包含少量相邻字幕。请求使用相应 API 凭据进行认证。</p>
+      <p>当前版本由浏览器直接请求所选服务，不经过我们运营的翻译代理服务器。服务商可接收到请求内容及正常网络连接所涉及的信息，例如 IP 地址、请求时间和客户端信息。扩展不把原站点的登录 Cookie 或整个浏览器历史作为模型翻译负载发送。</p>
+      <p>扩展不提供无字幕音视频的语音识别，也不为翻译上传音视频流。本地导入的字幕先在浏览器解析；如果随后使用云端翻译，其中需要翻译的文字可能被发送，原始音视频文件不会因此上传。</p>
+    </section>
+
+    <section id="providers"><h2>3. 信息发送给哪些服务</h2>
+      <div class="table-wrap"><table><thead><tr><th scope="col">你选择的功能</th><th scope="col">相关接收方或处理环境</th></tr></thead><tbody>
+        <tr><td>Chrome翻译</td><td>浏览器的本地翻译能力；语言包由浏览器提供方管理。</td></tr>
+        <tr><td>四款预置测试模型</td><td>腾讯云 TokenHub。当前包括 Hy-MT2-Lite、GLM-5.3-FlashX、DeepSeek-V4.1-Flash-1017、MiniMax-M3.1-Flash。根据模型的部署和路由方式，腾讯云及其接入的模型服务商可能处理请求。</td></tr>
+        <tr><td>自行配置的 GPT、Claude、Gemini</td><td>对应的 OpenAI、Anthropic、Google API 服务。</td></tr>
+        <tr><td>自定义接口及已保存的其他服务</td><td>你指定或选择的接口运营方，包括你自行部署的本机服务。</td></tr>
+        <tr><td>在线视频字幕读取及平台翻译</td><td>YouTube、哔哩哔哩、Netflix 等原内容平台，使用其当前页面可读取的字幕或相关接口。选择 YouTube 平台翻译时，会向 YouTube 请求该字幕的目标语言版本。</td></tr>
+      </tbody></table></div>
+      <p>第三方的数据保留、处理地点、模型训练用途和账户日志取决于该服务的条款、套餐与配置；本政策不代替它们的政策，也不保证所有服务采用相同规则。选择云端服务前，请确认其数据处理方式适合你的内容，避免提交不适合共享的秘密或敏感信息。服务及其基础设施可能位于你所在国家或地区之外。</p>
+      <ul class="resource-links"><li><a href="https://cloud.tencent.com/document/product/1823/130108" rel="noopener noreferrer">腾讯云 TokenHub 隐私政策</a> / <a href="https://cloud.tencent.com/document/product/301/129852" rel="noopener noreferrer">服务条款</a></li><li><a href="https://openai.com/policies/privacy-policy/" rel="noopener noreferrer">OpenAI 隐私政策</a></li><li><a href="https://www.anthropic.com/legal/privacy" rel="noopener noreferrer">Anthropic 隐私政策</a></li><li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google 隐私政策</a> / <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Gemini API 条款</a></li></ul>
+    </section>
+
+    <section id="storage"><h2>4. 数据保存在何处、保存多久</h2>
+      <ul><li><strong>API Key：</strong>你填写的 Key 默认保存在扩展会话存储中，会在浏览器或扩展会话结束、重置时清除。勾选“在本机长期保存密钥”后，Key 会保存在本机扩展存储中，直到你删除或卸载扩展。长期保存不是加密保险箱。</li>
+      <li><strong>其他设置：</strong>模型、语言、网站规则及显示偏好等保存在本机扩展存储中。扩展不使用 Chrome 同步存储自动同步这些数据。</li>
+      <li><strong>内容缓存：</strong>持久字幕和云端译文缓存通常有 14 天的有效期，并受容量或条数限制；过期数据在后续读写或手动清理时剔除，不是到点即运行的删除服务。页面内临时字幕、导入内容和本地译文缓存会随页面关闭或重置释放。</li>
+      <li><strong>诊断与计数：</strong>保存在本机，用于显示最近连接状态和用量。清空译文缓存不会自动清空服务设置、Key 或用量记录。</li>
+      <li><strong>导出文件：</strong>你导出的 SRT、VTT 等文件由你保管，关闭或卸载扩展不会删除这些下载文件。</li></ul>
+      <p>部分测试发行版包含开发者提供的有限共享模型授权。它们不是用户的个人 Key，也不代表无限免费额度；用户自行保存的 Key 优先使用。包内凭据封装不能保证安装者无法提取，实际访问范围和额度由服务商控制。</p>
+    </section>
+
+    <section id="permissions"><h2>5. 为什么需要权限</h2>
+      <ul><li><code>storage</code>：保存上述设置、凭据、缓存和本机状态。</li><li><code>activeTab</code> 与 <code>scripting</code>：在用户操作或已授权的网站中运行随扩展打包的翻译逻辑。</li><li><code>contextMenus</code>：提供右键翻译入口。</li><li>原视频站点及模型接口域名权限：读取相应字幕、发送用户选择的翻译请求。</li><li>可选 HTTP/HTTPS 网站权限：用于用户授权的其他网页、自动翻译网站或自定义接口。</li></ul>
+      <p>网站权限本身不等于自动向模型上传所有网页。翻译是否执行取决于你的操作和保存的网站规则；视频站点的适配脚本可能预先读取或暂存页面已经收到的相关字幕响应。</p>
+    </section>
+
+    <section id="controls"><h2>6. 你的控制与删除方式</h2>
+      <ul><li>选择 Chrome翻译、关闭翻译或将网站偏好改为“不自动翻译本站”，可以控制后续翻译。停止或取消请求不能保证撤回服务商已经收到的数据。</li><li>在翻译服务设置中勾选“删除该服务已保存的密钥”并保存，可移除个人 Key。</li><li>“删除自定义模型”会清除该配置及保存的 Key，不删除远端模型。扩展保留不含接口、名称和 Key 的版本标记，防止旧结果恢复。</li><li>使用“清空云端译文缓存”及视频面板中的字幕缓存清理功能，可分别清理对应缓存。恢复网页原文只是显示操作，不等于清空缓存。</li><li>可以在 Chrome 的扩展管理中撤销网站访问权限或卸载扩展。卸载会清理扩展的本机存储；导出文件及服务商保留的数据需另外处理。</li></ul>
+      <p>你可以通过下面的联系方式提出隐私问题或数据相关请求。本机数据可按上述方式管理；由第三方独立保存的数据，也可能需要向相应服务提出请求。本政策不限制适用法律赋予你的权利。</p>
+    </section>
+
+    <section id="use"><h2>7. 用途限制与安全措施</h2>
+      <p>我们将扩展处理的信息用于提供翻译、保存用户偏好、缓存、用量控制及必要的故障处理。我们不出售这些信息，不将其用于定向广告或信用评估，也不使用待译内容训练开发者自有模型。当前扩展没有广告 SDK、分析统计 SDK 或把翻译内容发送给开发者的遥测服务。</p>
+      <p>远程模型请求使用 HTTPS；用户配置的本机回环接口可以使用 HTTP。个人 Key 不显示在网页翻译浮层或扩展诊断中，内置测试授权只在扩展后台使用。所有客户端软件都存在风险，本机存储、包内凭据和第三方处理不能被描述为绝对安全。</p>
+    </section>
+
+    <section id="website"><h2>8. 本政策网页与联系渠道</h2>
+      <p>本网页是托管于 GitHub Pages 的静态页面，不包含广告、分析脚本、表单或我们设置的追踪 Cookie，也不会读取扩展中的配置或 Key。GitHub 说明，其 Pages 服务会为安全目的记录访问者 IP 地址；该托管处理遵循 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub 隐私声明</a>。</p>
+      <p>你通过 GitHub Issues 或 QQ 群联系时，主动提交的信息会由对应平台处理，并可能被其他参与者看到。请勿在公开问题或群聊中发布 API Key、账号凭据或敏感待译内容；如问题涉及隐私，可先询问合适的私下沟通方式。</p>
+    </section>
+
+    <section id="updates"><h2>9. 政策更新</h2><p>我们会在本页发布更新并修改日期。若功能或数据处理方式发生实质变化，会按适用要求更新产品说明或提供相应告知。中英文页面描述相同的处理方式；发现差异时，请联系维护者核对。</p></section>
+    <section id="contact"><h2>10. 联系我们</h2><p>维护者：免费翻译开发者（GitHub：<a href="https://github.com/uuuuzz" rel="noopener noreferrer">uuuuzz</a>）。</p><ul><li>GitHub：<a href="https://github.com/uuuuzz/free-translate-docs/issues" rel="noopener noreferrer">公开文档仓库 Issues</a></li><li>官方交流 QQ 群：<strong>1130151486</strong></li></ul></section>
+  </main>
+  <footer class="site-footer"><span>免费翻译 · 隐私政策</span><a href="en.html" lang="en">Read in English</a><a href="#main">回到顶部</a></footer>
+</body>
+</html>
